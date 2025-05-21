@@ -1,6 +1,6 @@
 import Brand from "@/components/shared/header/Brand";
 import UserMainNav from "./UserMainNav";
-import UserBar from "@/components/shared/header/UserBar";
+import Menu from "@/components/shared/header/Menu";
 
 const UserHeader = () => {
     return (
@@ -9,7 +9,7 @@ const UserHeader = () => {
                 <Brand />
                 <UserMainNav />
                 <div className='ml-auto items-center flex space-x-4'>
-                    <UserBar />
+                    <Menu />
                 </div>
             </div>
         </header>

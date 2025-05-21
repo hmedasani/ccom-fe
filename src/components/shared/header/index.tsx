@@ -1,13 +1,11 @@
+import Menu from "./Menu";
 import Brand from "./Brand";
-import UserBar from "./UserBar";
-
-
 
 const Header = () => {
     return (<header className="w-full border-b p-4">
         <div className="flex justify-between">
             <Brand />
-            <UserBar />
+            <Menu />
         </div>
     </header>);
 }
