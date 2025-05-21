@@ -2,6 +2,10 @@ import { Button } from '@/components/ui/button'
 import { Camera, User } from 'lucide-react'
 import React from 'react'
 
+export const metadata = {
+  title: "Home"
+}
+
 export default function HomePage() {
   return (
     <div>
