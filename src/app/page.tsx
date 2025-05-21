@@ -1,4 +1,5 @@
-import { Camera } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Camera, User } from 'lucide-react'
 import React from 'react'
 
 export default function HomePage() {
@@ -6,6 +7,7 @@ export default function HomePage() {
     <div>
       Hello Home Page
       <Camera color="red" size={48} />
+      <Button> <User color='white' /> Click me</Button>
     </div>
   )
 }
