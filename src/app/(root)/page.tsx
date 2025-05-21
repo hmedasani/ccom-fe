@@ -6,7 +6,14 @@ export const metadata = {
   title: "Home"
 }
 
-export default function HomePage() {
+const delay = (ms: number) => new Promise(
+  (resolve) => setTimeout(resolve, ms)
+)
+
+export default async function HomePage() {
+
+  await delay(2000)
+
   return (
     <div>
       Hello Home Page
