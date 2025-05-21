@@ -1,28 +1,13 @@
-import { Button } from "@/components/ui/button";
-import { ShoppingCart, User } from "lucide-react";
-import Link from "next/link";
+
 import ModeToggle from "./ModeToggle";
+import UserBarButtons from "./UserBarButtons";
 
 const UserBar = () => {
     return (
-        <div className="space-x-2">
+        <>
             <ModeToggle />
-            <Button asChild variant="ghost">
-                <Link href="/cart">
-                    <ShoppingCart color="black" /> Cart
-                </Link>
-            </Button>
-            <Button asChild >
-                <Link href="/sign-in">
-                    <User /> Sign-In
-                </Link>
-            </Button>
-            <Button asChild >
-                <Link href="/user/orders">
-                    <User />Orders
-                </Link>
-            </Button>
-        </div>
+            <UserBarButtons />
+        </>
     );
 }
 
