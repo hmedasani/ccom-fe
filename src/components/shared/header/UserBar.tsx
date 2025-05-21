@@ -17,6 +17,11 @@ const UserBar = () => {
                     <User /> Sign-In
                 </Link>
             </Button>
+            <Button asChild >
+                <Link href="/user/orders">
+                    <User />Orders
+                </Link>
+            </Button>
         </div>
     );
 }

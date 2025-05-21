@@ -4,7 +4,7 @@ import UserBar from "./UserBar";
 
 
 const Header = () => {
-    return (<header className="w-full border-b p-2">
+    return (<header className="w-full border-b p-4">
         <div className="flex justify-between">
             <Brand />
             <UserBar />
