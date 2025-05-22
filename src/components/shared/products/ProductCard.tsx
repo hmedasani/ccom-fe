@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Product } from "@/types/product";
 import Image from "next/image";
 import Link from "next/link";
+import ProductTag from "./ProductTag";
 
 interface ProductProps {
     product: Product
@@ -31,7 +32,7 @@ const ProductCard = ({ product }: ProductProps) => {
                 <p>{product.rating} stars</p>
                 {
                     product.stock > 0 ? (
-                        <p className="font-bold">{product.price}</p>
+                        <ProductTag price={product.price} currency="$" />
                     ) : (
                         <p className="text-red-800">
                             Out of stock!

@@ -14,7 +14,7 @@ export default async function HomePage() {
 
   await delay(0)
 
-  console.log(sampleData)
+  // console.log(sampleData)
   // const { products } = sampleData
 
   return (
