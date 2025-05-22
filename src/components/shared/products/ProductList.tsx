@@ -1,4 +1,5 @@
 import { SampleData } from "@/types/product";
+import ProductCard from "./ProductCard";
 
 interface ProductListProps {
     data: SampleData,
@@ -13,12 +14,11 @@ const ProductList = ({ data, title, limit }: ProductListProps) => {
 
     const limitedData = limit ? data.products.slice(0, limit) : data.products
 
-    const productsUi = <div className="grid grid-cols sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {limitedData.map((product, index) =>
-            <div key={index}>{product.name}</div>
+    const productsUi = <div className="grid gap-6 grid-cols sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {limitedData.map((product) =>
+            <ProductCard key={product.slug} product={product} />
         )}
     </div>
-
 
     return (
         <div className="my-10">
