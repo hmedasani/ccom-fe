@@ -1,13 +1,15 @@
-import Menu from "./Menu";
-import Brand from "./Brand";
+"use client"
+import React from 'react'
+import Brand from './Brand'
+import UserNavBar from './UserNavBar'
+import TopNavBar from './TopNavBar'
 
-const Header = () => {
-    return (<header className="w-full border-b p-4">
-        <div className="flex justify-between">
+export default function Header() {
+    return (
+        <header className="flex justify-between p-4 items-center bg-secondary border-b-2 border-muted">
             <Brand />
-            <Menu />
-        </div>
-    </header>);
+            <TopNavBar />
+            <UserNavBar />
+        </header>
+    )
 }
-
-export default Header;
