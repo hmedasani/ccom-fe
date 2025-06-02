@@ -43,17 +43,15 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
   --primary: oklch(0.208 0.042 265.755);
   --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
+  --secondary: oklch(1 0 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
+  --muted: oklch(0.868 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
   --accent: oklch(0.968 0.007 247.896);
   --accent-foreground: oklch(0.208 0.042 265.755);
@@ -74,6 +72,8 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --background: oklch(0.91 0 0); /* Light grey */
+  --foreground: oklch(0.129 0.042 264.695);
 }
 
 .dark {
@@ -87,7 +87,7 @@
   --primary-foreground: oklch(0.208 0.042 265.755);
   --secondary: oklch(0.279 0.041 260.031);
   --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
+  --muted: oklch(0.5 0.041 260.031);
   --muted-foreground: oklch(0.704 0.04 256.788);
   --accent: oklch(0.279 0.041 260.031);
   --accent-foreground: oklch(0.984 0.003 247.858);
@@ -110,10 +110,37 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  body {
+    @apply bg-background text-foreground;
+  }
+} */
+
+@layer base {
+  :root {
+    --background: #ede9e9;
+    --foreground: #1f1f1f;
+    --primary: #4b5d67;
+    --primary-foreground: #ffffff;
+    --secondary: #ff6b6b;
+    --secondary-foreground: #000000;
+    --radius: 1rem;
+    --header: #ede9e9;
+  }
+
+  .dark {
+    --background: #1a1a1a;
+    --foreground: #f1f1f1;
+    --primary: #9ca3af;
+    --primary-foreground: #1f1f1f;
+    --secondary: #f472b6;
+    --secondary-foreground: #1a1a1a;
+    --header: #1a1a1a;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
